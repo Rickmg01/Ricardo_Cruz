@@ -1,0 +1,70 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMYN3GF48XOdgGjHDmn5KeN",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Rickmg01/Rickmg/blob/main/pagina%20criada%20usando%20flask\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "0YMO038aiOIf"
+      },
+      "outputs": [],
+      "source": [
+        "from flask import Flask , render_template\n",
+        "\n",
+        "app = Flask(__name__)\n",
+        "\n",
+        "#criar a 1º pagina dp site\n",
+        "#função o que vai exibir na tela\n",
+        "#template\n",
+        "\n",
+        "\n",
+        "#função usada para buscar os templates em html\n",
+        "\n",
+        "@app.route(\"/\")\n",
+        "def minhapagina():\n",
+        "    return  render_template(\"minhapagina.html\")#template em html\n",
+        "\n",
+        "@app.route(\"/contatos\") #http://127.0.0.1:5000/contatos\n",
+        "def contatos():\n",
+        "    return render_template(\"contatos.html\") #template em html\n",
+        "\n",
+        "\n",
+        "#função usada para deixar os usuarios dinamicos na pagina\n",
+        "\n",
+        "@app.route(\"/usuarios/<nome_usuario>\")\n",
+        "def usuarios(nome_usuario):\n",
+        "    return nome_usuario\n",
+        "\n",
+        "#colocar o site no ar\n",
+        "if __name__== \"__main__\":\n",
+        "    app.run(debug=True)\n",
+        "\n"
+      ]
+    }
+  ]
+}
