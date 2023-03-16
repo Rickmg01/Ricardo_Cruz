@@ -1,0 +1,92 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMbHkJVq6C71YbS9YGBWSh4",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Rickmg01/Rickmg/blob/main/cpnceito%20de%20classes%20python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ifSkD7PdH3Kr",
+        "outputId": "7a21d5b3-0168-426e-dff2-2b15c911c3a2"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "estou ligando\n",
+            "i7 geforce3060 16g 300w\n",
+            "Estou deligando\n",
+            "i5 radeom_4070 16g 500w\n",
+            "Estou deligando\n",
+            "i9 gefoce 2060 32g 600w\n",
+            "estou ligando\n",
+            "i3 geforce 1060 16g 300w\n"
+          ]
+        }
+      ],
+      "source": [
+        "#classes  __init__ é o construtor\n",
+        "#fazer um programa onde vamos definir o modelo, processador, placa de video ,quantidade de memoria e fonte\n",
+        "\n",
+        "class computador:\n",
+        "    def __init__(self,processador,placa_video,memoria,fonte):\n",
+        "        self.processador = processador\n",
+        "        self.placa_video = placa_video\n",
+        "        self.memoria = memoria\n",
+        "        self.fonte = fonte\n",
+        "\n",
+        "    def Ligar(self):\n",
+        "        print('estou ligando')\n",
+        "\n",
+        "    def Desligar(self):\n",
+        "        print('Estou deligando')\n",
+        "\n",
+        "    def informacoesdocomputador(self):\n",
+        "        print(self.processador, self.placa_video, self.memoria, self.fonte)\n",
+        "\n",
+        "\n",
+        "\n",
+        "computador1 = computador('i7','geforce3060','16g','300w')\n",
+        "computador1.Ligar()\n",
+        "computador1.informacoesdocomputador()\n",
+        "computador2 = computador('i5','radeom_4070','16g','500w')\n",
+        "computador2.Desligar()\n",
+        "computador2.informacoesdocomputador()\n",
+        "computador3 = computador('i9','gefoce 2060','32g','600w')\n",
+        "computador3.Desligar()\n",
+        "computador3.informacoesdocomputador()\n",
+        "computador4 = computador('i3','geforce 1060','16g','300w')\n",
+        "computador4.Ligar()\n",
+        "computador4.informacoesdocomputador()\n"
+      ]
+    }
+  ]
+}
